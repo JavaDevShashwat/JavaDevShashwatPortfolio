@@ -529,20 +529,21 @@
                 <button id="portfoliolive" class="button">LIVE <i class="fa-solid fa-arrow-up-right-from-square"></i></button>
             </div>
             <div>
-                <img src="Portfolioimage.png">
-                <h3>MY PORTFOLIO</h3>
-                <p>My portfolio showcases some of my abilities.</p>
-                <p>An individual project, built in 1 day by me.</p>
+                <img src="miniYoutube.png">
+                <h3>Mini Youtube</h3>
+                <p>Mini Youtube is build using an free youtube api.</p>
+                <p>An individual assignment to demonstrate the use of js api.</p>
                 <p>HTML | CSS | JavaScript</p>
-                <button id="portfoliocode" class="button">CODE <i class="fa-brands fa-github"></i></button>
-                <button id="portfoliolive" class="button">LIVE <i class="fa-solid fa-arrow-up-right-from-square"></i></button>
+                <button id="miniYoutubeCode" class="button">CODE <i class="fa-brands fa-github"></i></button>
+                <button id="miniYoutubeLive" class="button">LIVE <i class="fa-solid fa-arrow-up-right-from-square"></i></button>
             </div>
         </div>
-        <script
-            src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js">
-        </script>
+        
         <div id = "stats">
             <p>&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=JavaDevShashwat&show_icons=true&locale=en" alt="JavaDevShashwat" /></p>
+            <script
+            src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js">
+            </script>
         </div>
     </div>
 
@@ -664,6 +665,16 @@
     portfoliolive.onclick= function(){
         window.open(
               "https://javadevshashwat.github.io/", "_blank");
+    }
+    let miniYoutubCode = document.getElementById("miniYoutubeCode");
+    portfoliocode.onclick= function(){
+        window.open(
+              "https://github.com/JavaDevShashwat/Trending-Movies", "_blank");
+    }
+    let miniYoutubeLive = document.getElementById("miniYoutubeLive");
+    portfoliolive.onclick= function(){
+        window.open(
+              "https://delicate-crostata-f7ad38.netlify.app/", "_blank");
     }
     let linkedin1 = document.getElementById("linkedin1");
     linkedin1.onclick= function(){
