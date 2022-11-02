@@ -25,14 +25,39 @@
             font-size: larger;
             box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
         }
-        #navbar>div>a{
+        #navbar>div>div>a{
             color: black;
             text-decoration: none;
         }
-        #navbar>div>a:hover{
+        #navbar>div>div>a:hover{
             color: rgb(64,112,244);
             cursor: pointer;
             text-decoration: underline;
+        }
+        .nav_Menu{
+            width: 70%;
+            text-align: center;
+        }
+        .nav_Menu>div{
+            display: inline;
+            margin: auto 20px;
+        }
+        .hamburger{
+            display: none;
+            cursor: pointer;
+        }
+        .port{
+            display: none;
+            cursor: pointer;
+        }
+        .bar{
+            display: block;
+            width: 30px;
+            height: 3px;
+            margin: 5px auto;
+            -webkit-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+            background-color: black;
         }
         #container1 {
             padding-top: 180px;
@@ -237,6 +262,40 @@
             padding: 10px;
         }
         @media screen and (max-width:992px) {
+            .hamburger{
+                display: block;
+                position: absolute;
+                left: 30px;
+            }
+            .hamburger.active .bar:nth-child(2){
+                opacity: 0;
+            }
+            .hamburger.active .bar:nth-child(1){
+                transform: translateY(8px) rotate(45deg);
+            }
+            .hamburger.active .bar:nth-child(3){
+                transform: translateY(-8px) rotate(-45deg);
+            }
+            .nav_Menu{
+                position: fixed;
+                left: -110%;
+                top: 50px;
+                gap: 0;
+                flex-direction: column;
+                width: 100%;
+                text-align: center;
+                transition: 0.3s;
+                background-color: white;
+                text-align: left;
+                padding-left: 20px;
+            }
+            .nav_Menu>div{
+                margin: 16px 0;
+                display: block;
+            }
+            .nav_Menu.active{
+                left: 0;
+            }
             #container1{
                 width: 90%;
             }
@@ -281,6 +340,40 @@
             }
         }
         @media screen and (max-width:600px) {
+            .hamburger{
+                display: block;
+                position: absolute;
+                left: 30px;
+            }
+            .hamburger.active .bar:nth-child(2){
+                opacity: 0;
+            }
+            .hamburger.active .bar:nth-child(1){
+                transform: translateY(8px) rotate(45deg);
+            }
+            .hamburger.active .bar:nth-child(3){
+                transform: translateY(-8px) rotate(-45deg);
+            }
+            .nav_Menu{
+                position: fixed;
+                left: -110%;
+                top: 50px;
+                gap: 0;
+                flex-direction: column;
+                width: 100%;
+                text-align: center;
+                transition: 0.3s;
+                background-color: white;
+                text-align: left;
+                padding-left: 20px;
+            }
+            .nav_Menu>div{
+                margin: 16px 0;
+                display: block;
+            }
+            .nav_Menu.active{
+                left: 0;
+            }
             #container1{
                 width: 90%;
             }
@@ -331,12 +424,21 @@
 <body>
     <a name="home"></a>
     <div id="navbar">
-        <div><a href="#home">Home</a></div>
-        <div><a href="#about">About</a></div>
-        <div><a href="#skills">Skills</a></div>
-        <div><a href="#projects">Projects</a></div>
-        <div><a href="#contact">Contact</a></div>
-        <div><a id="resume1" href = "https://github.com/JavaDevShashwat/JavaDevShashwat.github.io/raw/main/Shashwat%20Srivastava%20Resume%20(1).pdf">Resume</a></div>
+        <div class="port"><p style="margin: auto; font-size: 26px;">Portfolio</p></div>
+        <div class="nav_Menu">
+            <div><a class = "nav-item" href="#home">Home</a></div>
+            <div><a class = "nav-item" href="#about">About</a></div>
+            <div><a class = "nav-item" href="#skills">Skills</a></div>
+            <div><a class = "nav-item" href="#projects">Projects</a></div>
+            <div><a class = "nav-item" href="#contact">Contact</a></div>
+            <div><a class = "nav-item" id="resume1" href = "https://github.com/JavaDevShashwat/JavaDevShashwat.github.io/raw/main/Shashwat%20Srivastava%20Resume%20(1).pdf">Resume</a></div>
+        </div>
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        
     </div>
     <div id="container1">
         
@@ -578,4 +680,16 @@
         window.open(
               "https://medium.com/@sswtsrv", "_blank");
     }
+    const hamburger = document.querySelector(".hamburger");
+    const navMenu = document.querySelector(".nav_Menu");
+
+    hamburger.addEventListener("click", ()=>{
+        hamburger.classList.toggle("active");
+        navMenu.classList.toggle("active");
+    })
+
+    document.querySelectorAll(".nav-item").forEach(n => n.addEventListener("click", () => {
+        hamburger.classList.remove("active");
+        navMenu.classList.remove("active");
+    }))
 </script>
