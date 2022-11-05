@@ -14,6 +14,9 @@
         #stats{
             width: 100%;
             margin: 20px 0;
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            gap: 20px;
             text-align: center;
         }
         #navbar{
@@ -539,6 +542,9 @@
             </div>
         </div>
     </div>
+    <script
+                src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js">
+    </script>
 
 <!-- Optionally, include the theme (if you don't want to struggle to write the CSS) -->
 <link
@@ -565,11 +571,7 @@
        }
     }).then(r => r.text())
 </script>
-    <div id = "stats">
-        <script
-                src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js">
-        </script>
-        
+    <div id = "stats">        
         <p>&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=JavaDevShashwat&show_icons=true&locale=en" alt="JavaDevShashwat" /></p>
         <p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=JavaDevShashwat&" alt="JavaDevShashwat" /></p>
     </div>
