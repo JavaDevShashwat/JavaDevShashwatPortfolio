@@ -441,7 +441,7 @@
             <div><a class = "nav-item" href="#skills">Skills</a></div>
             <div><a class = "nav-item" href="#projects">Projects</a></div>
             <div><a class = "nav-item" href="#contact">Contact</a></div>
-            <div><a class = "nav-item" id="resume1" href = "https://github.com/JavaDevShashwat/JavaDevShashwat.github.io/raw/main/Shashwat%20Srivastava%20Resume%20(1).pdf">Resume</a></div>
+            <div><a class = "nav-item" id="resume1" onclick="resumeFun()" traget="_blank" href = "https://github.com/JavaDevShashwat/JavaDevShashwat.github.io/raw/main/Shashwat%20Srivastava%20Resume%20(1).pdf">Resume</a></div>
         </div>
         <div class="hamburger">
             <span class="bar"></span>
@@ -712,4 +712,8 @@
         hamburger.classList.remove("active");
         navMenu.classList.remove("active");
     }))
+    
+    resumeFun(){
+        return window.open('https://drive.google.com/file/d/1bmcxH417Z5lpkNzZAHkAFuqq04cJK_kz/view?usp=sharing', '_blank');
+    }
 </script>
