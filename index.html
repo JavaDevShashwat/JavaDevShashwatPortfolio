@@ -83,9 +83,12 @@
             color: rgb(64,112,244);
             cursor: pointer;
         }
+        #resume>a{
+            padding: 10px;
+        }
         #intro>button {
             margin-top: 60px;
-            padding: 15px 45px;
+            padding: 15px 0px;
             border-radius: 5px;
             background-color: rgb(64,112,244);
             font-weight: bold;
@@ -287,6 +290,11 @@
                 margin: 16px 0;
                 display: block;
             }
+            .nav_Menu>div{
+                margin: 50px 0;
+                display: block;
+                text-align: center;
+            }
             .nav_Menu.active{
                 left: 0;
             }
@@ -369,8 +377,9 @@
                 padding-left: 20px;
             }
             .nav_Menu>div{
-                margin: 16px 0;
+                margin: 50px 0;
                 display: block;
+                text-align: center;
             }
             .nav_Menu.active{
                 left: 0;
@@ -441,7 +450,7 @@
             <div><a class = "nav-item" href="#skills">Skills</a></div>
             <div><a class = "nav-item" href="#projects">Projects</a></div>
             <div><a class = "nav-item" href="#contact">Contact</a></div>
-            <div><a class = "nav-item" id="resume1" onclick="resumeFun()" traget="_blank" download href = "https://github.com/JavaDevShashwat/JavaDevShashwat.github.io/raw/main/Shashwat%20Srivastava%20Resume%20(1).pdf">Resume</a></div>
+            <div><a class = "nav-item" onclick="resume()" href = "https://drive.google.com/file/d/1bmcxH417Z5lpkNzZAHkAFuqq04cJK_kz/view?usp=sharing" download target="_blank">Resume</a></div>
         </div>
         <div class="hamburger">
             <span class="bar"></span>
@@ -459,7 +468,7 @@
                 <div id="color">Shashwat</div>
             </div>
             <div>Java Backend Developer</div>
-            <button id="resume">Resume</button>
+            <button id="resume"><a class = "nav-item" onclick="resume()" href = "https://drive.google.com/file/d/1bmcxH417Z5lpkNzZAHkAFuqq04cJK_kz/view?usp=sharing"  download target="_blank">Resume</a></button>
             <div id="icons">
                 <i id="linkedin" class="fa-brands fa-linkedin-in icons"></i>
                 <i id="github" class="fa-brands fa-github icons"></i>
@@ -623,16 +632,8 @@
 </html>
 <script>
     
-    let resume = document.getElementById("resume");
-    resume.onclick= function(){
-        window.open(
-              "https://github.com/JavaDevShashwat/JavaDevShashwat.github.io/raw/main/Shashwat%20Srivastava%20Resume%20(1).pdf");
-    }
-    
-    let resume1 = document.getElementById("resume1");
-    resume.onclick= function(){
-        window.open(
-              "https://github.com/JavaDevShashwat/JavaDevShashwat.github.io/raw/main/Shashwat%20Srivastava%20Resume%20(1).pdf");
+    function resume(){
+        return window.open("https://github.com/JavaDevShashwat/JavaDevShashwat.github.io/raw/main/Shashwat%20Srivastava%20Resume%20(1).pdf");
     }
     
     let linkedin = document.getElementById("linkedin");
@@ -714,7 +715,4 @@
         navMenu.classList.remove("active");
     }))
     
-    resumeFun(){
-        return window.open('https://drive.google.com/file/d/1bmcxH417Z5lpkNzZAHkAFuqq04cJK_kz/view?usp=sharing', '_blank');
-    }
 </script>
